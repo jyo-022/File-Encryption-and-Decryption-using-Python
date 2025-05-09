@@ -1,0 +1,14 @@
+This Python script implements a simple file encryption and decryption utility using the Fernet symmetric encryption method from the cryptography library. The script allows users to securely encrypt and decrypt text files, ensuring that sensitive information remains protected.
+
+Key Features:
+1. Key Generation: The script generates a unique encryption key using the `Fernet.generate_key()` method. This key is essential for both encrypting and decrypting files. The key is saved to a file named `secret.key`, which must be kept secure.
+
+2. File Encryption: Users can encrypt any text file by providing its name. The script reads the content of the specified file, encrypts it using the generated key, and saves the encrypted content to a new file with the `.enc` extension. This ensures that the original file remains unchanged.
+
+3. File Decryption: The script also allows users to decrypt previously encrypted files. By providing the name of the encrypted file (which should end with `.enc`), the script reads the encrypted content, decrypts it using the same key, and restores the original content to a new file without the `.enc` extension.
+
+4. User  Interaction: The script prompts users to choose whether they want to encrypt or decrypt a file. It handles basic error checking, such as verifying the existence of the specified files and ensuring that the correct file types are used.
+
+5. Security Considerations: The use of the Fernet encryption method provides a strong level of security, making it suitable for protecting sensitive data. However, users must ensure that the `secret.key` file is stored securely, as anyone with access to this key can decrypt the files.
+
+This utility is a practical demonstration of how to implement file encryption and decryption in Python, making it a valuable tool for anyone looking to secure their data.
